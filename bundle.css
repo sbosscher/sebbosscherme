@@ -1,0 +1,80 @@
+body {
+    font-family: 'segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B5BBB7;
+}
+
+.navbar {
+    width: 200px;
+    padding: 20px;
+    border-right: 1px solid #333;
+}
+
+.navbar img {
+    width: 150px;
+    height: 150px;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h1 {
+    color: #292222;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#section2 {
+    background-color: #355F49;
+}
+
+#section3 {
+    background-color: #355F49;
+}
+
+
+.linkedin-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B5BBB7;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.linkedin-button img {
+    height: 30px;
+    width: 110px;
+}
+
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B5BBB7;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.github-button img {
+    height: 30px;
+    width: 35px;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+}
