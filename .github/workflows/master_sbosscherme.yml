@@ -54,4 +54,4 @@ jobs:
           app-name: 'sbosscherme'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4DF6BC6407624436AA1D53DA5E9A0AE6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2200998DCB444B4BBF9B8B5E60638E16 }}
