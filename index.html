@@ -16,7 +16,21 @@
         My Resume<div></div><a href="resumeENG.html">English</a>/
         <a href="resume.html">Dutch</a><br><br>
     <!-- Add more navigation items as needed -->
-        </div>
+
+    <script>
+        window.onload = function() {
+            fetch('https://sbosscherfunction.azurewebsites.net/api/incrementvaluefunction?code=7ZyKfQIZeF5pMMMR67lUnF6gc6uF44sshL5Tphmm9s3ZAzFuJ_T6vQ%3D%3D')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('visitorCount').textContent = data;
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        };
+        </script>
+    
+    </div>
 
          <div class="main-content">
         <h1 id="section1"> Who are you? </h1>

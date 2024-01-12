@@ -1,0 +1,1 @@
+//"AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=sbosscherfunction;AccountKey=B6MzVoOgMqUc5vURaWNEFhA2johrlmqD3XjT9+XZssyMMGCFmLNUfXIwF4KRBJyUWUuh0Z6qwoV4+ASt6q4mUw==;EndpointSuffix=core.windows.net",
