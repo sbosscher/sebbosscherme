@@ -8,6 +8,8 @@ using Azure.Data.Tables;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Azure; // Add this line
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 
 public static class IncrementValueFunction
 {
@@ -16,10 +18,18 @@ public static class IncrementValueFunction
         [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
         ILogger log)
     {
-        string connectionString = "DefaultEndpointsProtocol=https;AccountName=sebbosschermegroup8c6a;AccountKey=klhn8XKDrqWT/gdUDEeZFfa3jP+IV2El1hozngh2eVXkjAN32u8giIfBguURkkaCaXC3Ycrm8z2L+AStnVbULQ==;EndpointSuffix=core.windows.net";
-        string tableName = "visits";
-        string partitionKey = "WebsiteData";
-        string rowKey = "VisitorCount"; // Add this line
+        string keyVaultUrl = Environment.GetEnvironmentVariable("KeyVaultUrl", EnvironmentVariableTarget.Process);
+        var client = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+
+        KeyVaultSecret connectionStringSecret = await client.GetSecretAsync("connectionString");
+        KeyVaultSecret tableNameSecret = await client.GetSecretAsync("tableName");
+        KeyVaultSecret partitionKeySecret = await client.GetSecretAsync("partitionKey");
+        KeyVaultSecret rowKeySecret = await client.GetSecretAsync("rowKey");
+
+        string connectionString = connectionStringSecret.Value;
+        string tableName = tableNameSecret.Value;
+        string partitionKey = partitionKeySecret.Value;
+        string rowKey = rowKeySecret.Value;
 
         // Create a new TableClient
         var tableClient = new TableClient(connectionString, tableName);
