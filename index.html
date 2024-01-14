@@ -51,7 +51,7 @@
 
 <script>
     window.onload = function() {
-        fetch('/api/Visitorcount/HttpTrigger1')
+        fetch('/api/proxy')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('visitorCount').textContent = 'Visitor Count: ' + data;
