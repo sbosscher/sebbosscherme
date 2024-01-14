@@ -51,7 +51,7 @@
 
 <script>
     window.onload = function() {
-        fetch('https://sbosscherfunction.azurewebsites.net/api/incrementvaluefunction?code=7ZyKfQIZeF5pMMMR67lUnF6gc6uF44sshL5Tphmm9s3ZAzFuJ_T6vQ%3D%3D')
+        fetch('/api/Visitorcount/HttpTrigger1')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('visitorCount').textContent = 'Visitor Count: ' + data;
