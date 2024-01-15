@@ -2,7 +2,7 @@
   "profiles": {
     "proxyApi": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7074",
+      "commandLineArgs": "--port 7062",
       "launchBrowser": false
     }
   }
