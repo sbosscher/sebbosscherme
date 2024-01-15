@@ -1,9 +1,0 @@
-{
-    "routes": [
-      {
-        "route": "/api/proxy",
-        "serve": "https://sbosscherfunction.azurewebsites.net/api/HttpTrigger1",
-        "methods": ["GET"]
-      }
-    ]
-  }

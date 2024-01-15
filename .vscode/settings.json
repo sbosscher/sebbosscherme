@@ -1,10 +1,7 @@
 {
-    "azureFunctions.deploySubpath": "bin/Release/net6.0/publish",
+    "azureFunctions.deploySubpath": "api/bin/Release/net6.0/publish",
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "publish (functions)",
-    "appService.preDeployTask": "publish-release",
-    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
-    "appService.defaultWebAppToDeploy": "/subscriptions/aba0834a-0aa3-421a-9465-6abb03665aa4/resourceGroups/sebbosscherme_group/providers/Microsoft.Web/sites/sbosscherme"
+    "azureFunctions.preDeployTask": "publish (functions)"
 }
