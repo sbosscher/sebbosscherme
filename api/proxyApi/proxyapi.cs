@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,10 @@ public static class ProxyApi
     {
         log.LogInformation("C# HTTP trigger function processed a request.");
 
-        var response = await client.GetStringAsync("https://sbosscher-f.azurewebsites.net/api/incrementvaluefunction?code=f5gGUYkK_1kM9baSpu-m5T0FEpxHw2ELZUKjg3EABDg4AzFutBA18Q%3D%3D");
+        var functionUrl = Environment.GetEnvironmentVariable("EXTERNAL_FUNCTION_URL");
+        var functionKey = Environment.GetEnvironmentVariable("EXTERNAL_FUNCTION_KEY");
+
+        var response = await client.GetStringAsync($"{functionUrl}?code={functionKey}");
 
         return new OkObjectResult(response);
     }
