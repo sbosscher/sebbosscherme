@@ -30,6 +30,7 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "api/proxyApi" # Api source code path - optional
+          api_build_command: "dotnet build" # Command to build api - optional
           output_location: "/" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
