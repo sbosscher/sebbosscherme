@@ -50,16 +50,14 @@
 <p id="visitorCount"></p>
 
 <script>
-    window.onload = function() {
-        fetch('/api/proxy')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('visitorCount').textContent = 'Visitor Count: ' + data;
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    };
+    fetch('/api/proxyapi')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('visitorCount').textContent = 'Visitor Count: ' + data;
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 </script>
 
 </body>
